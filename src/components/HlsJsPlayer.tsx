@@ -24,7 +24,7 @@ export default function HlsJsPlayer() {
         hls.attachMedia(video);
 
         mux.monitor(video, {
-          debug: false,
+          debug: true,
           hlsjs: hls,
           Hls,
           data: {
