@@ -1,8 +1,5 @@
-/// <reference path="../../node_modules/mux-embed/dist/types/mux-embed.d.ts"/>
 import React, { useEffect, useRef } from "react";
 import mux from "mux-embed";
-
-
 
 export default function () {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -19,7 +16,6 @@ export default function () {
           player_name: "Main Player", // any arbitrary string you want to use to identify this player
           player_init_time: initTime,
           // ...
-          
         },
       });
     }

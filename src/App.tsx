@@ -1,15 +1,27 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Html5Video from "./components/Html5Video";
-import HlsJsPlayer from "./components/HlsJsPlayer";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/home";
+import MuxDemoPage from "./pages/mux-demo";
+import SigmaPage from "./pages/sigma-page";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/hls-demo",
+    element: <MuxDemoPage />,
+  },
+  {
+    path: "/sigma-demo",
+    element: <SigmaPage />,
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <HlsJsPlayer />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
