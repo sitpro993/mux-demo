@@ -10,7 +10,7 @@ import mux from "mux-embed";
 export default function HlsJsPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const src =
-    "http://live-on-v2-akm.akamaized.net/manifest/test_live/master.m3u8";
+    "https://live-on-v2-akm.akamaized.net/manifest/test_live/master.m3u8";
 
   useEffect(() => {
     let hls: Hls;
